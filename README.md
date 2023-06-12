@@ -25,3 +25,5 @@ Automated Selenium scripts.
 action = ActionChains(driver)  
 action.double_click(on_element=*element*)  
 action.perform**() *(to double-click an element)*
+- **res = ''.join(random.choices(string.ascii_lowercase +  
+string.digits + string.ascii_uppercase, k=N))** *(randomly generated string)*
