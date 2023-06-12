@@ -8,6 +8,7 @@ Automated Selenium scripts.
 - **from faker import Faker** *(the library when we need to input data: name, email,etc)*
 - f**rom selenium.webdriver.common.by import By** *(search by a locator)*
 - **from selenium.webdriver import ActionChains** *(actions such as double click)*
+- **from selenium.webdriver.common.keys import Keys** *(keybord entries)*
 
 ## **SELENIUM COMMANDS**
 
