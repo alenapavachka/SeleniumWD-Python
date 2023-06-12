@@ -20,7 +20,7 @@ Automated Selenium scripts.
 - **driver.quit()** *(fully exits the browser/ we can you use ‘close’ but this one will only close the current tab)*
 - r**andom_email = str(random.randint(0, 99999)) + “myemail@example.com"** *(creating manuals a random email address: random.randint (0, 99999) turning into a string and then concatenating it with the remaining part)*
 - **time.sleep(0.5)** *(gives time to an element to appear or page to open)*
-- - ***element* = driver.find_element(By.ID, "input-element")  
+- ***element* = driver.find_element(By.ID, "input-element")  
 action = ActionChains(driver)  
 action.double_click(on_element=*element*)  
 action.perform**() *(to double-click an element)*
