@@ -1,7 +1,7 @@
 # SeleniumWD-Python
 Automated Selenium scripts.
 
-## **SELENIUM LIBRARIES **
+## SELENIUM LIBRARIES 
 
 
 - **from selenium import webdriver** *(always the first one)*
