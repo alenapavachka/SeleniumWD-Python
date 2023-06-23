@@ -1,4 +1,3 @@
-
 import time
 from faker import Faker
 from selenium import webdriver
@@ -6,8 +5,6 @@ from selenium.webdriver import ActionChains
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.select import Select
-
-
 
 fake = Faker('en_US')
 
@@ -29,7 +26,7 @@ driver.find_element(By.ID, "input-password").send_keys(fakePassword)
 
 driver.find_element(By.ID, "input-confirm").send_keys(fakePassword)
 
-driver. find_element(By.XPATH, "//label[contains(text(),'Yes')]").click()
+driver.find_element(By.XPATH, "//label[contains(text(),'Yes')]").click()
 
 driver.find_element(By.XPATH, "//label[contains(text(), 'I have read and agree')]").click()
 
@@ -77,7 +74,6 @@ try:
 except AssertionError:
     print('The title of the page is different. Current title is: ', driver.title)
 
-
 # change First and Last name
 # double-click the First Name field = select all text
 firstName = driver.find_element(By.ID, "input-firstname")
@@ -114,7 +110,7 @@ time.sleep(0.5)
 
 driver.find_element(By.XPATH, "//div[contains(text(), ' Success: Your account has been successfully updated.')]")
 
-driver.find_element(By.XPATH,"//i[@class = 'fas fa-check-circle']")
+driver.find_element(By.XPATH, "//i[@class = 'fas fa-check-circle']")
 
 # Check functionality of Password changing
 
@@ -134,7 +130,7 @@ time.sleep(0.5)
 
 driver.find_element(By.XPATH, "//div[contains(text(), 'Success: Your password has been successfully updated.')]")
 
-driver.find_element(By.XPATH,"//i[@class = 'fas fa-check-circle']")
+driver.find_element(By.XPATH, "//i[@class = 'fas fa-check-circle']")
 
 print('"Success: Your password has been successfully updated" message appeared')
 
@@ -160,8 +156,7 @@ driver.find_element(By.XPATH, '//a[contains(text(), "New Address")]').click()
 
 driver.find_element(By.ID, "input-firstname").send_keys(nameForAddress)
 driver.find_element(By.ID, "input-lastname").send_keys(lastNameForAddress)
-driver.find_element(By.ID, "input-company"). send_keys(fake.company())
-
+driver.find_element(By.ID, "input-company").send_keys(fake.company())
 
 driver.find_element(By.ID, "input-address-1").send_keys(fake.address())
 driver.find_element(By.ID, "input-city").send_keys(fake.city())
@@ -182,7 +177,7 @@ driver.find_element(By.XPATH, "//input[@value = 'Continue']").click()
 
 driver.find_element(By.XPATH, "//div[contains(text(), 'Your address has been successfully added')]")
 
-driver.find_element(By.XPATH,"//i[@class = 'fa fa-check-circle']")
+driver.find_element(By.XPATH, "//i[@class = 'fa fa-check-circle']")
 
 print('Your address has been successfully added.')
 
@@ -207,4 +202,3 @@ except AssertionError:
     print("The photo is not found")
 
 driver.quit()
-
