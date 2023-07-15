@@ -19,8 +19,8 @@ from selenium.common.exceptions import WebDriverException
 
 
 load_dotenv()
-BROWSERSTACK_USERNAME = os.environ.get("BROWSERSTACK_USERNAME") or "alenapavachka_1ibNYL"
-BROWSERSTACK_ACCESS_KEY = os.environ.get("BROWSERSTACK_ACCESS_KEY") or "PBU15dMBs3mh33iT3ym2"
+BROWSERSTACK_USERNAME = os.environ.get("BROWSERSTACK_USERNAME") or "xxxxxxx"
+BROWSERSTACK_ACCESS_KEY = os.environ.get("BROWSERSTACK_ACCESS_KEY") or "xxxxxxxxx"
 URL = os.environ.get("URL") or "https://hub.browserstack.com/wd/hub"
 BUILD_NAME = "browserstack-build-1"
 capabilities = [
