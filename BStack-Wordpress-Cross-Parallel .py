@@ -16,37 +16,46 @@ from selenium.webdriver.common.by import By
 from selenium.common.exceptions import NoSuchElementException, TimeoutException
 from threading import Thread
 from selenium.common.exceptions import WebDriverException
+import my_key as key
 
 
 load_dotenv()
-BROWSERSTACK_USERNAME = os.environ.get("BROWSERSTACK_USERNAME") or "alenapavachka_1ibNYL"
-BROWSERSTACK_ACCESS_KEY = os.environ.get("BROWSERSTACK_ACCESS_KEY") or "PBU15dMBs3mh33iT3ym2"
+BROWSERSTACK_USERNAME = os.environ.get("BROWSERSTACK_USERNAME") or key.BROWSERSTACK_USERNAME
+BROWSERSTACK_ACCESS_KEY = os.environ.get("BROWSERSTACK_ACCESS_KEY") or key.BROWSERSTACK_ACCESS_KEY
 URL = os.environ.get("URL") or "https://hub.browserstack.com/wd/hub"
-BUILD_NAME = "browserstack-build-1"
+BUILD_NAME = "browserstack-Cross-Browser-test"
 capabilities = [
     {
-        "browserName": "Edge",
+        "browserName": "chrome",
         "browserVersion": "latest",
-        "os": "OS X",
-        "osVersion": "Ventura",
-        "sessionName": "BStack WordPress Multi",  # test name
+        "os": "Windows",
+        "osVersion": "11",
+        "sessionName": "BStack Python WordPress parallel-Chrome-Win10",  # test name
         "buildName": BUILD_NAME,  # Your tests will be organized within this build
     },
-{
-        "browserName": "Firefox",
-        "browserVersion": "112.0",
+    {
+        "browserName": "firefox",
+        "browserVersion": "latest",
         "os": "Windows",
         "osVersion": "10",
-        "sessionName": "BStack WordPress Multi",
+        "sessionName": "BStack Python WordPress parallel-Firefox-Win10",
         "buildName": BUILD_NAME,
     },
     {
-        "browserName": "Chrome",
+        "browserName": "safari",
         "browserVersion": "latest",
         "os": "OS X",
-        "osVersion": "Catalina",
-        "sessionName": "BStack WordPress Multi",  # test name
-        "buildName": BUILD_NAME,  # Your tests will be organized within this build
+        "osVersion": "Big Sur",
+        "sessionName": "BStack Python WordPress parallel-Safari-BigSur",
+        "buildName": BUILD_NAME,
+    },
+    {
+        "browserName": "safari",
+        "browserVersion": "14.1",
+        "os": "OS X",
+        "osVersion": "Big Sur",
+        "sessionName": "BStack Python WordPress parallel-Safari-BigSur",
+        "buildName": BUILD_NAME,
     },
 ]
 
