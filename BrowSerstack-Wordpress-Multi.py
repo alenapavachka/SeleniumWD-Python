@@ -25,11 +25,27 @@ URL = os.environ.get("URL") or "https://hub.browserstack.com/wd/hub"
 BUILD_NAME = "browserstack-build-1"
 capabilities = [
     {
-        "browserName": "chrome",
+        "browserName": "Edge",
         "browserVersion": "latest",
+        "os": "OS X",
+        "osVersion": "Ventura",
+        "sessionName": "BStack WordPress Multi",  # test name
+        "buildName": BUILD_NAME,  # Your tests will be organized within this build
+    },
+{
+        "browserName": "Firefox",
+        "browserVersion": "112.0",
         "os": "Windows",
-        "osVersion": "11",
-        "sessionName": "BStack Python sample",  # test name
+        "osVersion": "10",
+        "sessionName": "BStack WordPress Multi",
+        "buildName": BUILD_NAME,
+    },
+    {
+        "browserName": "Chrome",
+        "browserVersion": "latest",
+        "os": "OS X",
+        "osVersion": "Catalina",
+        "sessionName": "BStack WordPress Multi",  # test name
         "buildName": BUILD_NAME,  # Your tests will be organized within this build
     },
 ]
