@@ -16,11 +16,12 @@ from selenium.webdriver.common.by import By
 from selenium.common.exceptions import NoSuchElementException, TimeoutException
 from threading import Thread
 from selenium.common.exceptions import WebDriverException
+import my_key as key
 
 
 load_dotenv()
-BROWSERSTACK_USERNAME = os.environ.get("BROWSERSTACK_USERNAME") or "xxxxxxxxxx"
-BROWSERSTACK_ACCESS_KEY = os.environ.get("BROWSERSTACK_ACCESS_KEY") or "xxxxxxxxx"
+BROWSERSTACK_USERNAME = os.environ.get("BROWSERSTACK_USERNAME") or key.BROWSERSTACK_USERNAME
+BROWSERSTACK_ACCESS_KEY = os.environ.get("BROWSERSTACK_ACCESS_KEY") or key.BROWSERSTACK_ACCESS_KEY
 URL = os.environ.get("URL") or "https://hub.browserstack.com/wd/hub"
 BUILD_NAME = "browserstack-build-1"
 capabilities = [
